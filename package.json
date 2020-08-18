@@ -21,6 +21,10 @@
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   },
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
