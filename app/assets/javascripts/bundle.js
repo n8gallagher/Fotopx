@@ -101,12 +101,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './store'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 
 
+ // import configureStore from './store/store';
+// import NewSessionContainer from './components/session/new_session_container';
+// const Root = ({ store }) => (
+//     <Provider store={store}>
+//         <HashRouter>
+//             {/* <Route path="/" component={NewSessionContainer} /> */}
+//         </HashRouter>
+//     </Provider>
+// )
 
-
+document.addEventListener('DOMContentLoaded', function () {
+  // const store = configureStore();
+  var root = document.getElementById('root');
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, " Hello React"));
+});
 
 /***/ }),
 
