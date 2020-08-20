@@ -38,7 +38,7 @@ class SessionForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <h2>Join fotopx</h2>
+                    <h2>{this.props.formType}</h2>
                     <br/>
                     {/* Please {this.props.formType} or {this.props.navLink} */}
                     {this.renderErrors()}
@@ -63,6 +63,8 @@ class SessionForm extends React.Component {
                         </label>
                         <br/>
                         <input className="session-submit" type="submit" value={this.props.formType} />
+
+                        <button className="demo-login">Login as demo user</button>
                     </div>
                 </form>
             </div>

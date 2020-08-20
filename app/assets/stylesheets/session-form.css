@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     margin-top: 150px;
-    width: 350px;
+    width: 400px;
     background: white;
     height: 400px;
     left: 35%;
@@ -14,16 +14,22 @@
 
 .login-form-box {
     margin: 30px;
+    font-size: 15px;
+}
+
+.login-form-box label {
+    color: rgba(0,0,0,.65);
 }
 
 .login-input {
-    height: 30px;
+    height: 40px;
     border-radius: 4px;
     border-width: 1px;
     border-style: solid;
     border-color: rgb(215, 216, 219);
-    width: 300px;
+    width: 340px;
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .session-submit {
@@ -32,6 +38,17 @@
     color: white;
     width: 100%;
     margin-top: 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.demo-login {
+    background-color: rgb(60, 90, 150);
+    border: none;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
     border-radius: 20px;
     font-size: 20px;
     padding: 10px;
