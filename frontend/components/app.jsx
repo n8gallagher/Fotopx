@@ -11,18 +11,18 @@ import {
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import Splash from './splash/splash';
+import Nav from './nav/nav';
+
 
 const App = () => (
   <div>
-    <header>
-      <Link to="/" className="header-link">
-        <h3>Fotopx</h3>
-      </Link>
-    </header>
-    <Switch>
+    
+      <Route path="/" component={Nav} />
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-    </Switch>
+      <Route exact path="/" component={Splash} />
+    
   </div>
 );
 

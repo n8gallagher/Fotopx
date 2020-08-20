@@ -1,0 +1,64 @@
+.nav-box {
+    padding-left: 64px;
+    padding-right: 64px;
+    background-color: white;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.nav-box sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.left-nav h3 {
+    color: black;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.left-nav h3:hover {
+    color: blue;
+}
+
+.left-nav {
+    
+}
+
+.right-nav {
+
+}
+
+
+.nav-login-button {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+}
+.nav-login-button:hover {
+    color: blue;
+}
+
+.nav-signup-button {
+    background-color: white;
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 15px;
+}
+
+.nav-signup-button:hover {
+    color: blue;
+}
