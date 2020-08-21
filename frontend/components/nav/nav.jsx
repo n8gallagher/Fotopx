@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Nav = ({ currentUser, logout }) =>  {
+const Nav = (props) =>  {
     const sessionLinks = () => (
         <div className="nav-box">
             <div className="left-nav">
@@ -11,8 +11,8 @@ const Nav = ({ currentUser, logout }) =>  {
             </div>
 
             <div className="right-nav">
-                <Link to="/login">
-                    <button className="nav-login-button">Login</button>
+                <Link to="/">
+                    <button className="nav-login-button">Log in</button>
                 </Link>
                 <Link to="/signup">
                     <button className="nav-signup-button">Sign Up</button>
@@ -30,13 +30,12 @@ const Nav = ({ currentUser, logout }) =>  {
             </div>
 
             <div className="right-nav">
-                <button className="nav-logout-button" onClick={logout}>Logout</button>
+                <button className="nav-logout-button" onClick={props.logout}>Logout</button>
             </div>
         </div>
     )
 
-    
-        return currentUser? logoutLinks() : sessionLinks();
+    return props.currentUser ? logoutLinks() : sessionLinks();
 };
 
 export default Nav;
