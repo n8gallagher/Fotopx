@@ -16,6 +16,10 @@ class SessionForm extends React.Component {
         });
     }
 
+    componentWillUnmount(){
+        this.props.clearErrors();
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
@@ -27,7 +31,7 @@ class SessionForm extends React.Component {
         return(
             <ul>
                 {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
+                    <li key={`error-${i}`} className="error-message">
                         {error}
                     </li>
                 ))}

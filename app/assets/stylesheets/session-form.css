@@ -17,6 +17,10 @@
     font-size: 15px;
 }
 
+.login-form-box h2 {
+    text-align: center;
+}
+
 .login-form-box label {
     color: rgba(0,0,0,.65);
 }
@@ -62,4 +66,8 @@
 
 .demo-login:hover {
     background-color: rgb(40, 61, 102);
+}
+
+.error-message {
+    color: red;
 }

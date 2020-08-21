@@ -16,7 +16,7 @@
 
 .left-nav h3 {
     color: black;
-    font-weight: bold;
+    font-weight: light;
     font-size: 32px;
 }
 
@@ -57,6 +57,7 @@
     border-color: black;
     border-width: 2px;
     border-radius: 15px;
+    margin-left: 10px;
 }
 
 .nav-signup-button:hover {
