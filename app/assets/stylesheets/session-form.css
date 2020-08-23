@@ -5,7 +5,7 @@
     margin-top: 150px;
     width: 400px;
     background: white;
-    height: 420px;
+    height: 470px;
     left: 35%;
     border-width: 1px;
     border-style: solid;
@@ -48,6 +48,10 @@
     padding: 15px;
 }
 
+.session-submit:focus {
+    outline: 0;
+}
+
 .session-submit:hover {
     background-color: rgb(47, 132, 212);
 }
@@ -64,10 +68,38 @@
     padding: 15px;
 }
 
+.demo-login:focus {
+    outline: 0;
+}
+
 .demo-login:hover {
     background-color: rgb(40, 61, 102);
 }
 
 .error-message {
     color: red;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+.session-form-nav-link {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 16px;
+    color: rgb(109, 115, 120);
+}
+
+.under-form-link {
+    text-decoration: none;
+    color: blue;
+}
+
+.under-form-link:hover {
+    text-decoration: underline;
 }

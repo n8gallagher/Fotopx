@@ -18,9 +18,9 @@ import NavContainer from './nav/nav-container';
 const App = () => (
   <div>
       <Route path="/" component={NavContainer} />
-      <AuthRoute exact path="/" component={LogInFormContainer} />
+      <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-      <ProtectedRoute exact path="/splash" component={SplashContainer} /> 
+      <ProtectedRoute exact path="/" component={SplashContainer} /> 
     
   </div>
 );

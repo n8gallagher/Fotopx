@@ -11,7 +11,7 @@ const Nav = (props) =>  {
             </div>
 
             <div className="right-nav">
-                <Link to="/">
+                <Link to="/login">
                     <button className="nav-login-button">Log in</button>
                 </Link>
                 <Link to="/signup">

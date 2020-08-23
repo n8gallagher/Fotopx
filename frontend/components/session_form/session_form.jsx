@@ -25,15 +25,15 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user)
-            .then(() => this.props.history.push("/splash"));
+            .then(() => this.props.history.push("/"));
     }
 
     loginDemoUser() {
         const user = { username: 'Jerrysmith', password: 'plut0isApl4net' };
         let { username, password } = user;
 
-        this.props.processForm(user)
-            .then(() => this.props.history.push("/splash"));
+        this.props.processLoginForm(user)
+            .then(() => this.props.history.push("/"));
     }
 
 
@@ -78,7 +78,8 @@ class SessionForm extends React.Component {
                         <br/>
                         <input className="session-submit" type="submit" value={this.props.formType} />
 
-                        <button className="demo-login" onClick={this.loginDemoUser}>Login as demo user</button>
+                        <input className="demo-login" type="submit" onClick={this.loginDemoUser} value="Log in as demo user" />
+                        <div className="session-form-nav-link">{this.props.navLink}</div>
                     </div>
                 </form>
             </div>

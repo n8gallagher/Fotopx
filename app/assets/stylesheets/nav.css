@@ -40,6 +40,11 @@
     font-size: 16px;
     border: none;
 }
+
+.nav-login-button:focus {
+    outline: 0;
+    border-style: none;
+}
 .nav-login-button:hover {
     color: blue;
 }
@@ -60,6 +65,14 @@
     margin-left: 10px;
 }
 
+.nav-signup-button:focus {
+    outline: 0;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 15px;
+}
+
 .nav-logout-button {
     background-color: white;
     color: black;
@@ -74,6 +87,14 @@
     border-width: 2px;
     border-radius: 15px;
     margin-left: 10px;
+}
+
+.nav-logout-button:focus {
+    outline: 0;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 15px;
 }
 
 .nav-logout-button:hover {
