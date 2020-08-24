@@ -30,6 +30,7 @@ const Nav = (props) =>  {
             </div>
 
             <div className="right-nav">
+                <h4>Logged in as {props.currentUser.username}</h4>
                 <button className="nav-logout-button" onClick={props.logout}>Logout</button>
             </div>
         </div>
