@@ -1,0 +1,48 @@
+.user-show-box {
+    display: flex;
+}
+
+.profile-header-image {
+    height: 400px;
+    width: 100%;
+    position: absolute;
+}
+
+.profile-picture-round-thumb {
+    width: 80px;
+    position: relative;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    left: 50%;
+    top: 330px;
+    z-index: 3;
+}
+
+.profile-info-box {
+    position: absolute;
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 350px;
+    top: 450px;
+}
+
+.pencil-edit-button {
+    width: 50px;
+    position: absolute;
+}
+
+.profile-info-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    z-index: 3;
+}
+
+.profile-info-content h4 {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
