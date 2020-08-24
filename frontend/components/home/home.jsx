@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Home = () => (
     <div className="home-box">
-        <img src="assets/home.png" alt="cow" className="home-photo"/>
+        
+        <img src={window.homePhotoURL} alt="cow" className="home-photo"/>
         <div className="home-left-copy">
             <h1>Find and share great stunning photos</h1>
             <p>find inspiration from all kinds of photos from around the planet. We don't follow trends, we just have great photos</p>
