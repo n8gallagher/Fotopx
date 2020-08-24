@@ -28,6 +28,10 @@
     border-radius: 35px;
 }
 
+.home-signup-button:hover {
+    background-color: rgb(187, 187, 187);
+}
+
 .home-signup-button:focus {
     outline: none;
 }
@@ -49,6 +53,6 @@
 .home-photographer {
     position: absolute;
     left: 70%;
-    bottom: 0px;
+    top: 85%;
     z-index: 2;
 }
