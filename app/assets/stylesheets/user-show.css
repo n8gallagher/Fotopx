@@ -1,22 +1,26 @@
 .user-show-box {
     display: flex;
+    align-items: center;
 }
 
 .profile-header-image {
     height: 400px;
     width: 100%;
     position: absolute;
+    margin-top: 20px;
+    z-index: -1;
 }
 
 .profile-picture-round-thumb {
     width: 80px;
-    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 275px;
     border-style: solid;
     border-color: white;
     border-width: 2px;
-    left: 50%;
-    top: 330px;
     z-index: 3;
+    border-radius: 50%;
 }
 
 .profile-info-box {
@@ -25,24 +29,35 @@
     color: black;
     width: 100%;
     height: 350px;
-    top: 450px;
+    top: 400px;
 }
 
 .pencil-edit-button {
-    width: 50px;
+    width: 35px;
     position: absolute;
+    top: 10%;
+    left: 85%;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+}
+
+.pencil-edit-button:hover {
+    background-color: rgb(223, 223, 223);
+}
+
+.pencil-edit-button:focus {
+    outline: none;
 }
 
 .profile-info-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 200px;
     z-index: 3;
 }
 
 .profile-info-content h4 {
+    text-align: center;
     font-weight: bold;
     font-size: 30px;
-    text-align: center;
+    padding-top: 8%;
 }
