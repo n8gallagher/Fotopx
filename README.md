@@ -21,4 +21,15 @@
 
   - Users will be able to like photos
   
+- Home Feed
+
+  - Will display photos and information to the user once they are logged in
+  - Will include links to other users
+  
+- Profile Page
+
+  - Users will be able to edit their own profile photo, header image and user information
+  - Page will show user information and display their photos in a grid
+  - Different functionality will be available for the current user vs when viewing another user's profile
+  
 
