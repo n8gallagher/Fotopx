@@ -12,7 +12,7 @@
  
  - The home page features a custom SVG styled after the 500px home page.
  - I took the photo of the cow in Rishikesh, India
- ![Cow from Rishikesh, India](/assets/images/home-ex.PNG "Cow in Rishikesh, India")
+ ![Cow from Rishikesh, India](app/assets/images/home-ex.PNG "Cow in Rishikesh, India")
  
 ### Future Plans
 
