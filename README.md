@@ -4,11 +4,15 @@
 
  This is the live  *[Fotopx site](https://fotopx.herokuapp.com/#/)*.
  
- This site is my final project for App Academy, and a clone of *[500px](https://500px.com/)*.
+ This site is a showcase of my fullstack development skills as well as my own photography. It is a clone of *[500px](https://500px.com/)*.
  
  ### Current Features
  
  Fotopx uses a custom user auth and allows login and logout functionality. The site features a demo user login to test out the site as well as a demo user page to view their profile picture and header image.
+ 
+ - The home page features a custom SVG styled after the 500px home page.
+ - I took the photo of the cow in Rishikesh, India
+ ![Cow from Rishikesh, India](/assets/images/home-ex.PNG "Cow in Rishikesh, India")
  
 ### Future Plans
 
