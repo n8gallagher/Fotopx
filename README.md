@@ -11,7 +11,7 @@
  Fotopx uses a custom user auth and allows login and logout functionality. The site features a demo user login to test out the site as well as a demo user page to view their profile picture and header image.
  
  - The home page features a custom SVG styled after the 500px home page.
- - I took the photo of the cow in Rishikesh, India
+ - Featuring my photo of a cow in Rishikesh, India
  ![Cow from Rishikesh, India](app/assets/images/home-ex.PNG "Cow in Rishikesh, India")
  
 ### Future Plans
