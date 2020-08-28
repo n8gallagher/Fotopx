@@ -106,3 +106,12 @@
 .nav-signup-button:hover {
     color: blue;
 }
+
+.nav-profile-link {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-profile-link:hover {
+    color: blue;
+}

@@ -4,11 +4,11 @@ import React from 'react';
 const UserShow = (props) => (
     <div className="user-show-box">
         <img className="profile-header-image" 
-            src="https://www.solidbackgrounds.com/images/2560x1440/2560x1440-davys-grey-solid-color-background.jpg" 
+            src="https://images.unsplash.com/photo-1525351159099-81893194469e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1946&q=80" 
             alt="blank-background"
         />
         <img className="profile-picture-round-thumb" 
-            src="https://pacdn.500px.org/userpic.png" 
+            src={window.jerryProfileURL} 
             alt="blank-profile-picture"
         />
         <div className="profile-info-box">

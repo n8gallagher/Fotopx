@@ -1,14 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const Photos = ({ review, author }) => {
-    const { rating, body } = review;
+const Photos = (state) => {
+
+  const photos = props.entities.photos.map((image) => {
+
+  });
     return (
       <div>
         <ul>
-          <li>Rating: {rating}</li>
-          <li>{body} - by {author.username}</li>
-  
+          <li>{}</li>
         </ul>
       </div>
     );
