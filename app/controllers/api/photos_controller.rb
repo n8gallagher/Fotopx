@@ -10,8 +10,9 @@ class Api::PhotosController < ApplicationController
     end
 
     def index
-        @photos = Photo.find_by(user_id: params[:user_id])
-        render "api/photos/show"
+        @photos = Photo.all
+        debugger
+        render "api/photos/index"
     end
 
     def create
