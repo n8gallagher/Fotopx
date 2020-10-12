@@ -237,6 +237,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _nav_nav_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./nav/nav-container */ "./frontend/components/nav/nav-container.js");
 /* harmony import */ var _home_home__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./home/home */ "./frontend/components/home/home.jsx");
 /* harmony import */ var _user_user_show_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./user/user_show_container */ "./frontend/components/user/user_show_container.jsx");
+/* harmony import */ var _photo_post_photo__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./photo/post_photo */ "./frontend/components/photo/post_photo.jsx");
+
 
 
 
@@ -268,6 +270,10 @@ var App = function App() {
     exact: true,
     path: "/",
     component: _splash_splash_container__WEBPACK_IMPORTED_MODULE_6__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__["ProtectedRoute"], {
+    exact: true,
+    path: "/photos/post",
+    component: _photo_post_photo__WEBPACK_IMPORTED_MODULE_10__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__["ProtectedRoute"], {
     exact: true,
     path: "/p",
@@ -428,6 +434,29 @@ var Nav = function Nav(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Nav);
+
+/***/ }),
+
+/***/ "./frontend/components/photo/post_photo.jsx":
+/*!**************************************************!*\
+  !*** ./frontend/components/photo/post_photo.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var PostPhoto = function PostPhoto() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Post a photo"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "file"
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PostPhoto);
 
 /***/ }),
 
