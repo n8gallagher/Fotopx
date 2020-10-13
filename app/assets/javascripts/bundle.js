@@ -111,7 +111,6 @@ var receivePhotos = function receivePhotos(photos) {
 };
 var fetchPhotos = function fetchPhotos() {
   return function (dispatch) {
-    debugger;
     _util_photo_api_util__WEBPACK_IMPORTED_MODULE_1__["fetchPhotos"]().then(function (photos) {
       dispatch(receivePhotos(photos));
     }); // .catch(errors => {
@@ -511,20 +510,18 @@ var PhotosIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(PhotosIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var _this2 = this;
-
       console.log(this.props);
-      this.props.fetchPhotos().then(function (photos) {
-        _this2.setState(Object.values(photos));
-      });
+      debugger;
+      this.props.fetchPhotos(); // .then((photos) => {
+      //   this.setState(Object.values(photos))
+      // })
     }
   }, {
     key: "render",
     value: function render() {
-      var photos = this.state.photos ? this.state.photos : [];
+      var photos = this.props.photos ? this.props.photos : [];
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "index of photos"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, photos.map(function (photo) {
-        /*#__PURE__*/
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, photo.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "title: ", photo.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: photo.photoUrl,
           alt: ""
         }));

@@ -11,7 +11,6 @@ class Api::PhotosController < ApplicationController
 
     def index
         @photos = Photo.all
-        debugger
         render "api/photos/index"
     end
 

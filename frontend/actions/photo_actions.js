@@ -9,7 +9,6 @@ export const receivePhotos = photos => ({
 })
 
 export const fetchPhotos = () => dispatch => {
-    debugger
     APIUtil.fetchPhotos()
         .then((photos) => {
             dispatch(receivePhotos(photos))
