@@ -10,7 +10,6 @@ class PhotosIndex extends React.Component {
 
   componentDidMount () {
     console.log(this.props);
-    debugger
     this.props.fetchPhotos()
       // .then((photos) => {
       //   this.setState(Object.values(photos))

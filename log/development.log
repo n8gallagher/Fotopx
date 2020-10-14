@@ -10256,3 +10256,664 @@ Redirected to https://fotopx-dev.s3.us-west-1.amazonaws.com/nAVxvDGbCaDTMDmwRtPx
 Completed 302 Found in 79ms (ActiveRecord: 0.3ms)
 
 
+Started GET "/api/photos" for ::1 at 2020-10-13 14:17:21 -0700
+Processing by Api::PhotosController#index as JSON
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Photo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  Rendered api/photos/index.json.jbuilder (7.4ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/photos" for ::1 at 2020-10-13 14:17:57 -0700
+Processing by Api::PhotosController#index as JSON
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Photo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  Rendered api/photos/index.json.jbuilder (6.3ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 14:18:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Eqgm6Wiv9j8EQYXOpsggVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:17:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Eqgm6Wiv9j8EQYXOpsggVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 285ms (Views: 281.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:17:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Eqgm6Wiv9j8EQYXOpsggVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:17:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Eqgm6Wiv9j8EQYXOpsggVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:18:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Eqgm6Wiv9j8EQYXOpsggVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:18:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Eqgm6Wiv9j8EQYXOpsggVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/photos" for ::1 at 2020-10-13 15:18:15 -0700
+Processing by Api::PhotosController#index as JSON
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Photo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  Rendered api/photos/index.json.jbuilder (8.7ms)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b55d0d8393bf22172249aac64f4db117e74685b5/bay-bridge.png" for ::1 at 2020-10-13 15:18:15 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b55d0d8393bf22172249aac64f4db117e74685b5", "filename"=>"bay-bridge"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nateg/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.1ms) [0m[34mGenerated URL for file at key: nAVxvDGbCaDTMDmwRtPxJ1Pk (https://fotopx-dev.s3.us-west-1.amazonaws.com/nAVxvDGbCaDTMDmwRtPxJ1Pk?response-content-disposition=inline%3B%20filename%3D%22bay-bridge.png%22%3B%20filename%2A%3DUTF-8%27%27bay-bridge.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2YDVRDNDVHUEKW7S%2F20201013%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20201013T221815Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=9e570bba806ea844a95a2498ec9256ec407fa1b8cd4a9d102b5bd3821785af89)[0m
+Redirected to https://fotopx-dev.s3.us-west-1.amazonaws.com/nAVxvDGbCaDTMDmwRtPxJ1Pk?response-content-disposition=inline%3B%20filename%3D%22bay-bridge.png%22%3B%20filename%2A%3DUTF-8%27%27bay-bridge.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2YDVRDNDVHUEKW7S%2F20201013%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20201013T221815Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=9e570bba806ea844a95a2498ec9256ec407fa1b8cd4a9d102b5bd3821785af89
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:18:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Eqgm6Wiv9j8EQYXOpsggVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:19:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Eqgm6Wiv9j8EQYXOpsggVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 285ms (Views: 282.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:19:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Eqgm6Wiv9j8EQYXOpsggVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 720ms (Views: 717.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:19:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Eqgm6Wiv9j8EQYXOpsggVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 303ms (Views: 301.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:46:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Eqgm6Wiv9j8EQYXOpsggVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 310ms (Views: 298.7ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/api/photos" for ::1 at 2020-10-13 15:47:14 -0700
+
+SyntaxError - syntax error, unexpected ':', expecting '}'
+...          render json {message: "You did it"}
+...                              ^
+/mnt/b/fsp/fotopx/app/controllers/api/photos_controller.rb:20: syntax error, unexpected '}', expecting keyword_end
+...er json {message: "You did it"}
+...                              ^
+/mnt/b/fsp/fotopx/app/controllers/api/photos_controller.rb:46: syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/api/photos_controller.rb:20:in `'
+
+Started GET "/" for ::1 at 2020-10-13 15:47:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Eqgm6Wiv9j8EQYXOpsggVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 52ms (Views: 49.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/photos" for ::1 at 2020-10-13 15:47:22 -0700
+
+SyntaxError - syntax error, unexpected ':', expecting '}'
+...          render json {message: "You did it"}
+...                              ^
+/mnt/b/fsp/fotopx/app/controllers/api/photos_controller.rb:20: syntax error, unexpected '}', expecting keyword_end
+...er json {message: "You did it"}
+...                              ^
+/mnt/b/fsp/fotopx/app/controllers/api/photos_controller.rb:46: syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/api/photos_controller.rb:20:in `'
+
+Started DELETE "/api/session" for ::1 at 2020-10-13 15:47:29 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Eqgm6Wiv9j8EQYXOpsggVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:40
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Jerrysmith"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:40
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "4_US5KRrmarGRnJ7Dh4oKw"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:40
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "4_US5KRrmarGRnJ7Dh4oKw"], ["updated_at", "2020-10-13 22:47:29.723308"], ["id", 3]]
+  ↳ app/models/user.rb:40
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:40
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (2.1ms)
+Completed 200 OK in 25ms (Views: 8.3ms | ActiveRecord: 8.8ms)
+
+
+Started POST "/api/session" for ::1 at 2020-10-13 15:47:31 -0700
+Started POST "/api/session" for ::1 at 2020-10-13 15:47:31 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Jerrysmith", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Jerrysmith"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:40
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Jerrysmith"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:40
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:40
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["updated_at", "2020-10-13 22:47:32.146683"], ["id", 3]]
+  ↳ app/models/user.rb:40
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:21
+  ↳ app/models/user.rb:40
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.7ms)
+Completed 200 OK in 226ms (Views: 8.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/photos" for ::1 at 2020-10-13 15:47:37 -0700
+
+SyntaxError - syntax error, unexpected ':', expecting '}'
+...          render json {message: "You did it"}
+...                              ^
+/mnt/b/fsp/fotopx/app/controllers/api/photos_controller.rb:20: syntax error, unexpected '}', expecting keyword_end
+...er json {message: "You did it"}
+...                              ^
+/mnt/b/fsp/fotopx/app/controllers/api/photos_controller.rb:46: syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/api/photos_controller.rb:20:in `'
+
+Started GET "/" for ::1 at 2020-10-13 15:48:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/photos" for ::1 at 2020-10-13 15:48:03 -0700
+
+SyntaxError - syntax error, unexpected ':', expecting '}'
+...          render json {message: "You did it"}
+...                              ^
+/mnt/b/fsp/fotopx/app/controllers/api/photos_controller.rb:20: syntax error, unexpected '}', expecting keyword_end
+...er json {message: "You did it"}
+...                              ^
+/mnt/b/fsp/fotopx/app/controllers/api/photos_controller.rb:46: syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/api/photos_controller.rb:20:in `'
+
+Started GET "/" for ::1 at 2020-10-13 15:49:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 64ms (Views: 54.2ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/api/photos" for ::1 at 2020-10-13 15:50:00 -0700
+Processing by Api::PhotosController#index as JSON
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (1.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Photo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  Rendered api/photos/index.json.jbuilder (77.4ms)
+Completed 200 OK in 88ms (Views: 74.0ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b55d0d8393bf22172249aac64f4db117e74685b5/bay-bridge.png" for ::1 at 2020-10-13 15:50:00 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b55d0d8393bf22172249aac64f4db117e74685b5", "filename"=>"bay-bridge"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nateg/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.3ms) [0m[34mGenerated URL for file at key: nAVxvDGbCaDTMDmwRtPxJ1Pk (https://fotopx-dev.s3.us-west-1.amazonaws.com/nAVxvDGbCaDTMDmwRtPxJ1Pk?response-content-disposition=inline%3B%20filename%3D%22bay-bridge.png%22%3B%20filename%2A%3DUTF-8%27%27bay-bridge.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2YDVRDNDVHUEKW7S%2F20201013%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20201013T225000Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4e0f209c25206f1aa99bbef79e335b3ade4456900e23596761da3ef37874f173)[0m
+Redirected to https://fotopx-dev.s3.us-west-1.amazonaws.com/nAVxvDGbCaDTMDmwRtPxJ1Pk?response-content-disposition=inline%3B%20filename%3D%22bay-bridge.png%22%3B%20filename%2A%3DUTF-8%27%27bay-bridge.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2YDVRDNDVHUEKW7S%2F20201013%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20201013T225000Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4e0f209c25206f1aa99bbef79e335b3ade4456900e23596761da3ef37874f173
+Completed 302 Found in 41ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:50:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 310ms (Views: 307.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:51:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:51:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 64ms (Views: 61.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/photos" for ::1 at 2020-10-13 15:51:30 -0700
+Processing by Api::PhotosController#index as JSON
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Photo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  Rendered api/photos/index.json.jbuilder (24.3ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:53:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 67ms (Views: 61.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/photos" for ::1 at 2020-10-13 15:53:53 -0700
+Processing by Api::PhotosController#index as JSON
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Photo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  Rendered api/photos/index.json.jbuilder (60.4ms)
+Completed 200 OK in 86ms (Views: 73.2ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:54:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 70ms (Views: 68.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:54:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 65ms (Views: 62.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/photos" for ::1 at 2020-10-13 15:54:18 -0700
+Processing by Api::PhotosController#index as JSON
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Photo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  Rendered api/photos/index.json.jbuilder (31.1ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:56:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 52ms (Views: 49.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:57:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 43ms (Views: 40.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 15:57:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/photos" for ::1 at 2020-10-13 15:57:13 -0700
+Processing by Api::PhotosController#index as JSON
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Photo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  Rendered api/photos/index.json.jbuilder (17.1ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b55d0d8393bf22172249aac64f4db117e74685b5/bay-bridge.png" for ::1 at 2020-10-13 15:57:13 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b55d0d8393bf22172249aac64f4db117e74685b5", "filename"=>"bay-bridge"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nateg/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.2ms) [0m[34mGenerated URL for file at key: nAVxvDGbCaDTMDmwRtPxJ1Pk (https://fotopx-dev.s3.us-west-1.amazonaws.com/nAVxvDGbCaDTMDmwRtPxJ1Pk?response-content-disposition=inline%3B%20filename%3D%22bay-bridge.png%22%3B%20filename%2A%3DUTF-8%27%27bay-bridge.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2YDVRDNDVHUEKW7S%2F20201013%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20201013T225713Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=30e777062498c83f76920197954b9091aefcdb92e9f5ef37144a43bb2a62e161)[0m
+Redirected to https://fotopx-dev.s3.us-west-1.amazonaws.com/nAVxvDGbCaDTMDmwRtPxJ1Pk?response-content-disposition=inline%3B%20filename%3D%22bay-bridge.png%22%3B%20filename%2A%3DUTF-8%27%27bay-bridge.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2YDVRDNDVHUEKW7S%2F20201013%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20201013T225713Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=30e777062498c83f76920197954b9091aefcdb92e9f5ef37144a43bb2a62e161
+Completed 302 Found in 18ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:29:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (30.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (58.1ms)
+Completed 200 OK in 356ms (Views: 322.4ms | ActiveRecord: 30.5ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:29:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 64ms (Views: 60.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:29:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:30:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:30:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/photos" for ::1 at 2020-10-13 17:30:35 -0700
+Processing by Api::PhotosController#index as JSON
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Photo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  Rendered api/photos/index.json.jbuilder (20.0ms)
+Completed 200 OK in 28ms (Views: 23.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b55d0d8393bf22172249aac64f4db117e74685b5/bay-bridge.png" for ::1 at 2020-10-13 17:30:35 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b55d0d8393bf22172249aac64f4db117e74685b5", "filename"=>"bay-bridge"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nateg/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.2ms) [0m[34mGenerated URL for file at key: nAVxvDGbCaDTMDmwRtPxJ1Pk (https://fotopx-dev.s3.us-west-1.amazonaws.com/nAVxvDGbCaDTMDmwRtPxJ1Pk?response-content-disposition=inline%3B%20filename%3D%22bay-bridge.png%22%3B%20filename%2A%3DUTF-8%27%27bay-bridge.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2YDVRDNDVHUEKW7S%2F20201014%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20201014T003035Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=936d687654b9b08a519be27faea9ee662a5df4cfcbdb018a1db898b897a89825)[0m
+Redirected to https://fotopx-dev.s3.us-west-1.amazonaws.com/nAVxvDGbCaDTMDmwRtPxJ1Pk?response-content-disposition=inline%3B%20filename%3D%22bay-bridge.png%22%3B%20filename%2A%3DUTF-8%27%27bay-bridge.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2YDVRDNDVHUEKW7S%2F20201014%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20201014T003035Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=936d687654b9b08a519be27faea9ee662a5df4cfcbdb018a1db898b897a89825
+Completed 302 Found in 19ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/photos" for ::1 at 2020-10-13 17:34:44 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nateg/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::PhotosController#index as JSON
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Photo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  Rendered api/photos/index.json.jbuilder (86.3ms)
+Completed 200 OK in 113ms (Views: 95.5ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:35:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 1732ms (Views: 1726.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:36:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 66ms (Views: 60.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:36:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 67ms (Views: 64.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:39:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 54ms (Views: 49.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:39:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/photos" for ::1 at 2020-10-13 17:39:28 -0700
+Processing by Api::PhotosController#index as JSON
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Photo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  Rendered api/photos/index.json.jbuilder (58.1ms)
+Completed 200 OK in 68ms (Views: 51.2ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b55d0d8393bf22172249aac64f4db117e74685b5/bay-bridge.png" for ::1 at 2020-10-13 17:39:28 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b55d0d8393bf22172249aac64f4db117e74685b5", "filename"=>"bay-bridge"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nateg/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (5.2ms) [0m[34mGenerated URL for file at key: nAVxvDGbCaDTMDmwRtPxJ1Pk (https://fotopx-dev.s3.us-west-1.amazonaws.com/nAVxvDGbCaDTMDmwRtPxJ1Pk?response-content-disposition=inline%3B%20filename%3D%22bay-bridge.png%22%3B%20filename%2A%3DUTF-8%27%27bay-bridge.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2YDVRDNDVHUEKW7S%2F20201014%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20201014T003928Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=542ae5131ef5434768e5318befed67130c63e87c90207bfaa9253a1b08ebb340)[0m
+Redirected to https://fotopx-dev.s3.us-west-1.amazonaws.com/nAVxvDGbCaDTMDmwRtPxJ1Pk?response-content-disposition=inline%3B%20filename%3D%22bay-bridge.png%22%3B%20filename%2A%3DUTF-8%27%27bay-bridge.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2YDVRDNDVHUEKW7S%2F20201014%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20201014T003928Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=542ae5131ef5434768e5318befed67130c63e87c90207bfaa9253a1b08ebb340
+Completed 302 Found in 11ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:39:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:39:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/photos" for ::1 at 2020-10-13 17:39:55 -0700
+Processing by Api::PhotosController#index as JSON
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Photo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/photos/index.json.jbuilder:3
+  Rendered api/photos/index.json.jbuilder (5.4ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:41:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kg37BdVFE3D8VnCdBOCutQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 0.2ms)
+
+
