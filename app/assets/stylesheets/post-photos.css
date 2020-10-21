@@ -1,0 +1,37 @@
+.post-photo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.post-heading {
+  font-weight: bold;
+  margin-top: 80px;
+}
+
+.post-photo-form {
+  display: flex;
+  height: 230px;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.post-photo-form input[type="file"] {
+  margin-left: 20%;
+}
+
+.post-photo-submit {
+  background:#0870d1;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  color: white;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-right: 7%;
+  padding-left: 7%;
+  border-radius: 25px;
+}

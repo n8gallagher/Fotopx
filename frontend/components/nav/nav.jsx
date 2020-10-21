@@ -32,6 +32,7 @@ const Nav = (props) =>  {
             <div className="right-nav">
                 <h4>Logged in as <Link to="/p" className="nav-profile-link">{props.currentUser.username}</Link></h4>
                 <button className="nav-logout-button" onClick={props.logout}>Logout</button>
+                <Link to="/photos/post" className="nav-upload-button"> <span className="upload-arrow">↑</span> Upload</Link>
             </div>
         </div>
     )

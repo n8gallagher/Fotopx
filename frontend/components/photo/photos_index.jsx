@@ -23,16 +23,20 @@ class PhotosIndex extends React.Component {
       <div>
         <h1>index of photos</h1>
         
-        <ul>{photos.map(
+        <div className="flex-photos-index">{photos.map(
           (photo) => {
             return (
-              <li>
-                <h1>title: {photo.title}</h1>
-                <img src={photo.photoUrl} alt=""/>
-              </li> 
+              
+                <div className="photo-index-item-box" key={photo.id}>
+                  <div className="photo-index-item-info">
+                    <h4>title: {photo.title}</h4>
+                  </div>
+                  <img className="index-item-image" src={photo.photoUrl} alt=""/>
+                </div>
+              
             )
           }
-        )}</ul>
+        ).reverse()}</div>
       </div>
     )
   }

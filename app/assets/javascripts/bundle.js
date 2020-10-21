@@ -249,7 +249,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _nav_nav_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./nav/nav-container */ "./frontend/components/nav/nav-container.js");
 /* harmony import */ var _home_home__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./home/home */ "./frontend/components/home/home.jsx");
 /* harmony import */ var _user_user_show_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./user/user_show_container */ "./frontend/components/user/user_show_container.jsx");
-/* harmony import */ var _photo_post_photo__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./photo/post_photo */ "./frontend/components/photo/post_photo.jsx");
+/* harmony import */ var _photo_post_photo_container__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./photo/post_photo_container */ "./frontend/components/photo/post_photo_container.js");
 /* harmony import */ var _photo_photos_index_container__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./photo/photos_index_container */ "./frontend/components/photo/photos_index_container.js");
 
 
@@ -291,7 +291,7 @@ var App = function App() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__["ProtectedRoute"], {
     exact: true,
     path: "/photos/post",
-    component: _photo_post_photo__WEBPACK_IMPORTED_MODULE_10__["default"]
+    component: _photo_post_photo_container__WEBPACK_IMPORTED_MODULE_10__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__["ProtectedRoute"], {
     exact: true,
     path: "/p",
@@ -332,7 +332,7 @@ var Home = function Home() {
   }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/signup",
     className: "home-signup-link"
-  }, "Sign Up"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+  }, "Sign Up"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     className: "svg-wave",
     id: "Layer_1",
     "data-name": "Layer 1",
@@ -344,7 +344,7 @@ var Home = function Home() {
     transform: "translate(-1 -61.42)"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "home-photographer"
-  }, "photo by Nate Gallagher"));
+  }, "photo by Nate Gallagher")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
@@ -445,7 +445,12 @@ var Nav = function Nav(props) {
     }, props.currentUser.username)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "nav-logout-button",
       onClick: props.logout
-    }, "Logout")));
+    }, "Logout"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/photos/post",
+      className: "nav-upload-button"
+    }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "upload-arrow"
+    }, "\u2191"), " Upload")));
   };
 
   return props.currentUser ? logoutLinks() : sessionLinks();
@@ -519,12 +524,20 @@ var PhotosIndex = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var photos = this.props.photos ? this.props.photos : [];
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "index of photos"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, photos.map(function (photo) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "title: ", photo.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "index of photos"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "flex-photos-index"
+      }, photos.map(function (photo) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "photo-index-item-box",
+          key: photo.id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "photo-index-item-info"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "title: ", photo.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "index-item-image",
           src: photo.photoUrl,
           alt: ""
         }));
-      })));
+      }).reverse()));
     }
   }]);
 
@@ -585,6 +598,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -621,18 +636,24 @@ var PostPhoto = /*#__PURE__*/function (_React$Component) {
     _this.state = {
       title: "",
       description: "",
-      // user_id - get from current user
+      user_id: props.currentUser.id,
       photoFile: null
     };
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.update = _this.update.bind(_assertThisInitialized(_this));
+    _this.handleFile = _this.handleFile.bind(_assertThisInitialized(_this));
+    _this.showSpinner = _this.showSpinner.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(PostPhoto, [{
-    key: "handleInput",
-    value: function handleInput(e) {
-      this.setState({
-        title: e.currentTarget.value
-      });
+    key: "update",
+    value: function update(field) {
+      var _this2 = this;
+
+      return function (e) {
+        return _this2.setState(_defineProperty({}, field, e.currentTarget.value));
+      };
     }
   }, {
     key: "handleFile",
@@ -642,13 +663,22 @@ var PostPhoto = /*#__PURE__*/function (_React$Component) {
       });
     }
   }, {
+    key: "showSpinner",
+    value: function showSpinner() {
+      var spinner = document.getElementById("upload-spinner");
+      spinner.className = spinner.className.replace(/\bspinner-hide\b/g, "");
+    }
+  }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
+      var _this3 = this;
+
       e.preventDefault();
       var formData = new FormData();
       formData.append('photo[title]', this.state.title);
       formData.append('photo[image]', this.state.photoFile);
-      formData.append('photo[description]', this.state.photoFile);
+      formData.append('photo[description]', this.state.description);
+      formData.append('photo[user_id]', this.state.user_id);
       $.ajax({
         url: '/api/photos',
         method: 'POST',
@@ -656,24 +686,42 @@ var PostPhoto = /*#__PURE__*/function (_React$Component) {
         contentType: false,
         processData: false
       }).then(function (res) {
-        return console.log(res.message);
-      }, function (res) {
+        debugger;
+        console.log(res.message);
+      }, this.showSpinner(), setTimeout(function () {
+        _this3.props.history.push('/photos');
+      }, 1000), function (res) {
         return console.log(res.responseJSON);
       });
     }
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Post a photo"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Image Title:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Image Description:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Image File:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "file"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-photo-box"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "post-heading"
+      }, "Post a photo"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "post-photo-form"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Image Title:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        value: this.state.title,
+        onChange: this.update("title")
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Image Description:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+        value: this.state.description,
+        onChange: this.update("description")
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Image File:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "file",
+        onChange: this.handleFile
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "post-photo-submit",
         type: "submit",
-        value: "Post Photo"
-      })));
+        value: "Upload Photo",
+        onClick: this.handleSubmit
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "upload-spinner",
+        className: "loader spinner-hide"
+      }));
     }
   }]);
 
@@ -681,6 +729,43 @@ var PostPhoto = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (PostPhoto);
+
+/***/ }),
+
+/***/ "./frontend/components/photo/post_photo_container.js":
+/*!***********************************************************!*\
+  !*** ./frontend/components/photo/post_photo_container.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _actions_photo_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/photo_actions */ "./frontend/actions/photo_actions.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _post_photo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./post_photo */ "./frontend/components/photo/post_photo.jsx");
+
+
+
+
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    currentUser: state.entities.users[state.session.id]
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    fetchPhotos: function fetchPhotos() {
+      return dispatch(Object(_actions_photo_actions__WEBPACK_IMPORTED_MODULE_1__["fetchPhotos"])());
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(_post_photo__WEBPACK_IMPORTED_MODULE_3__["default"]));
 
 /***/ }),
 

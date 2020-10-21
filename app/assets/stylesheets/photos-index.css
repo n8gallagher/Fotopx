@@ -1,0 +1,34 @@
+.flex-photos-index {
+  display: flex;
+  flex-direction: row;
+  margin: .3%;
+  flex-wrap: wrap;
+}
+
+.photo-index-item-box {
+  height: 300px;
+  top: 20px;
+  position: relative;
+  margin: .3%;
+}
+
+.index-item-image {
+  height: 100%;
+  object-fit: scale-down;
+}
+
+.photo-index-item-info {
+  position: absolute;
+  color: white;
+  display: none;
+  bottom: 2%;
+}
+
+.photo-index-item-box:hover .photo-index-item-info {
+  display: block;
+  
+}
+
+.photo-index-item-box:hover .index-item-image {
+  box-shadow: inset 0px 11px 35px -10px black;
+}

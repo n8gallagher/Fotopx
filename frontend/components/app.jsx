@@ -15,7 +15,7 @@ import SplashContainer from './splash/splash_container';
 import NavContainer from './nav/nav-container';
 import Home from './home/home';
 import UserShowContainer from './user/user_show_container';
-import PostPhoto from './photo/post_photo'
+import PostPhotoContainer from './photo/post_photo_container'
 import PhotosIndexContainer from './photo/photos_index_container';
 
 
@@ -27,7 +27,7 @@ const App = () => (
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
       <ProtectedRoute exact path="/photos" component={PhotosIndexContainer} />
       <ProtectedRoute exact path="/" component={SplashContainer} />
-      <ProtectedRoute exact path="/photos/post" component={PostPhoto} />
+      <ProtectedRoute exact path="/photos/post" component={PostPhotoContainer} />
       <ProtectedRoute exact path="/p" component={UserShowContainer} />  
     
   </div>

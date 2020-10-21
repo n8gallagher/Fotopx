@@ -1,0 +1,19 @@
+.loader {
+  border: 16px solid #a1a1a1; /* Light grey */
+  border-top: 16px solid #0870d1; /* Blue */
+  border-radius: 50%;
+  top: 20%;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  animation: spin .46s linear infinite;
+}
+
+.spinner-hide {
+  display: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
