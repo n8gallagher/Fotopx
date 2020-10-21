@@ -20,9 +20,8 @@ class PhotosIndex extends React.Component {
   render () {
     let photos = this.props.photos ? this.props.photos : [];
     return (
-      <div>
-        <h1>index of photos</h1>
-        
+      <div className="photos-index-container">
+        <div className="index-top-div"></div>
         <div className="flex-photos-index">{photos.map(
           (photo) => {
             return (

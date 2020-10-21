@@ -1,8 +1,18 @@
+.photos-index-container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.index-top-div {
+  height: 60px;
+}
 .flex-photos-index {
   display: flex;
   flex-direction: row;
-  margin: .3%;
+  justify-content: space-between;
   flex-wrap: wrap;
+  width: 100%;
+  flex-basis: 100%;
 }
 
 .photo-index-item-box {
