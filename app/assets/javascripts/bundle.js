@@ -90,23 +90,33 @@
 /*!*******************************************!*\
   !*** ./frontend/actions/photo_actions.js ***!
   \*******************************************/
-/*! exports provided: RECEIVE_PHOTOS, receivePhotos, fetchPhotos */
+/*! exports provided: RECEIVE_PHOTOS, RECEIVE_PHOTO, receivePhotos, receivePhoto, fetchPhotos, fetchPhoto */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_PHOTOS", function() { return RECEIVE_PHOTOS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_PHOTO", function() { return RECEIVE_PHOTO; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receivePhotos", function() { return receivePhotos; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receivePhoto", function() { return receivePhoto; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchPhotos", function() { return fetchPhotos; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchPhoto", function() { return fetchPhoto; });
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/index.js");
 /* harmony import */ var _util_photo_api_util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/photo_api_util */ "./frontend/util/photo_api_util.js");
 
 
 var RECEIVE_PHOTOS = 'RECEIVE_PHOTOS';
+var RECEIVE_PHOTO = 'RECEIVE_PHOTO';
 var receivePhotos = function receivePhotos(photos) {
   return {
     type: RECEIVE_PHOTOS,
     photos: photos
+  };
+};
+var receivePhoto = function receivePhoto(photo) {
+  return {
+    type: RECEIVE_PHOTO,
+    photo: photo
   };
 };
 var fetchPhotos = function fetchPhotos() {
@@ -116,6 +126,13 @@ var fetchPhotos = function fetchPhotos() {
     }); // .catch(errors => {
     //     dispatch(receivePhotoErrors(errors))
     // })
+  };
+};
+var fetchPhoto = function fetchPhoto() {
+  return function (dispatch) {
+    _util_photo_api_util__WEBPACK_IMPORTED_MODULE_1__["fetchPhoto"]().then(function (photo) {
+      dispatch(receivePhoto(photo));
+    });
   };
 };
 
