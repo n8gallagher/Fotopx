@@ -27,6 +27,9 @@ const Nav = (props) =>  {
             <Link to="/" className="header-link" style={{textDecoration: 'none'}}>
                 <h3>foto<sup>px</sup></h3>
             </Link>
+            <Link to="/discover" className="nav-links">
+                Discover <span className="consolas">˅</span>
+            </Link>
             </div>
 
             <div className="right-nav">

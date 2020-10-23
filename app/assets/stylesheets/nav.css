@@ -18,6 +18,32 @@
     font-size: smaller;
 }
 
+.left-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 17%;
+}
+
+.nav-links {
+    text-decoration: none;
+}
+
+.nav-links:visited {
+    color: black;
+}
+
+.nav-links:hover {
+    color: blue;
+}
+
+
+
+.consolas {
+    font-family: 'consolas';
+    vertical-align: sub;
+}
+
 .left-nav h3 {
     color: black;
     font-weight: light;
