@@ -1,7 +1,7 @@
 import { RECEIVE_PHOTO } from '../actions/photo_actions';
 import { RECEIVE_USER } from '../actions/user_actions';
 
-const photos = (prevState = {}, action) => {
+const photo = (prevState = {}, action) => {
     Object.freeze(prevState);
     switch (action.type) {
         case RECEIVE_PHOTO:
@@ -15,4 +15,4 @@ const photos = (prevState = {}, action) => {
     }
 }
 
-export default photos;
+export default photo;
