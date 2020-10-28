@@ -557,9 +557,6 @@ var PhotosIndex = /*#__PURE__*/function (_React$Component) {
           className: "photo-index-item-box relative-box",
           key: photo.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "top-gradient-show",
-          id: "top-grad"
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "bottom-gradient-show",
           id: "bot-grad"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

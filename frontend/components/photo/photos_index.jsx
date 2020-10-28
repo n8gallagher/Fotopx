@@ -27,10 +27,7 @@ class PhotosIndex extends React.Component {
             return (
               
                 <div className="photo-index-item-box relative-box" key={photo.id}>
-                  
-                  <div className="top-gradient-show" id="top-grad"></div>
-                  <div className="bottom-gradient-show" id="bot-grad"></div>
-              
+                  <div className="bottom-gradient-show" id="bot-grad"></div>             
                   <div className="photo-index-item-info">
                     <h4>title: {photo.title}</h4>
                     <svg className="heart-icon" version="1.1" viewBox="-6.9 -13.1 40 40" x="0px" y="0px" id="icon-heart">
