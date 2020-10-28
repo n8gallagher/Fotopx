@@ -17,6 +17,8 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
 
+    has_many :likes, dependent: :destroy
+
     def self.find_by_credentials(username, password)
         user = self.find_by(username: username)
         if user && user.is_password?(password)
