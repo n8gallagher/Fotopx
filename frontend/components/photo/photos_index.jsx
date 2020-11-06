@@ -1,19 +1,26 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 
 class PhotosIndex extends React.Component {
   
   constructor (props) {
     super(props)
-    this.state = {photos: []}
+    this.state = {photos: []};
+    // this.handlePhotoClick = this.handlePhotoClick.bind(photo);
   }
 
   componentDidMount () {
     console.log(this.props);
     this.props.fetchPhotos()
-      // .then((photos) => {
-      //   this.setState(Object.values(photos))
-      // })
+  }
+
+  componentWillUnmount () {
+    this.props.clearPhotos()
+  }
+
+  handleLike () {
+
   }
 
 
@@ -24,9 +31,13 @@ class PhotosIndex extends React.Component {
         <div className="index-top-div"></div>
         <div className="flex-photos-index">{photos.map(
           (photo) => {
+            
             return (
-              
-                <div className="photo-index-item-box relative-box" key={photo.id}>
+              <Link to={{
+                pathname: `photo/${photo.id}`,
+                // state: {photo: photo, user_id: photo.user_id}
+              }}>
+                <div className="photo-index-item-box relative-box" key={photo.id} onClick={() => this.handlePhotoClick()}>
                   <div className="bottom-gradient-show" id="bot-grad"></div>             
                   <div className="photo-index-item-info">
                     <h4>title: {photo.title}</h4>
@@ -37,7 +48,7 @@ class PhotosIndex extends React.Component {
                   </div>
                   <img className="index-item-image" src={photo.photoUrl} alt=""/>
                 </div>
-              
+                </Link>
             )
           }
         ).reverse()}</div>

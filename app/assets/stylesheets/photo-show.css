@@ -1,0 +1,38 @@
+.photo-backdrop {
+  height: 600px;
+  width: 100%;
+  background: rgb(34, 34, 34); 
+  display: flex;
+  
+}
+
+.photo-show-main {
+  display: flex;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.photo-show-left {
+  width: 65%;
+  margin-top: 3%;
+  margin-right: .5%;
+  background: white;
+}
+
+.photo-show-right {
+  width: 35%;
+  margin-top: 3%;
+  margin-left: .5%;
+  background: white;
+  display: none;
+}
+
+.photo-show-image {
+  position: absolute;
+  height: 92%;
+  width: 100%;
+  object-fit: contain;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+

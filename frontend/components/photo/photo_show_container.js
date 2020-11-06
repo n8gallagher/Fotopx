@@ -1,13 +1,18 @@
 import {connect} from 'react-redux'
-import { NavLink } from 'react-router-dom'
 import PhotoShow from './photo_show'
+import { fetchPhoto } from '../../actions/photo_actions'
+import { fetchUser } from '../../actions/user_actions'
 
-const mapStateToProps = (state) => ({
-  photo: 
-})
-
-const mapDispatchToProps = (dispatch) => {
-  return null;
+const mapStateToProps = (state) => {
+  return {
+    photo: state.entities.photos,
+    user: {}
+  }
 }
 
-export default connect(mapDispatchToProps, mapStateToProps)(PhotoShow);
+const mapDispatchToProps = (dispatch) => ({
+    fetchUser: (userId) => (dispatch(fetchUser(userId))),
+    fetchPhoto: (photoId) => (dispatch(fetchPhoto(photoId)))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(PhotoShow);
