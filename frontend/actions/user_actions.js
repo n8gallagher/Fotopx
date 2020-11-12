@@ -2,13 +2,15 @@ import * as UserAPI from '../util/users_api_util';
 
 export const RECEIVE_USER = 'RECEIVE_USER';
 
-export const receiveUser = data => ({
-    type: RECEIVE_USER,
-    data
-});
+const receiveUser = data => {
+    return {
+        type: RECEIVE_USER,
+        data
+    } 
+};
 
-export const fetchUser = userId => dispatch => (
-    UserAPI.fetchUser(userId)
+export const fetchUser = userId => dispatch => {
+    return UserAPI.fetchUser(userId)
         .then(data => dispatch(receiveUser(data)))
-);
+};
 

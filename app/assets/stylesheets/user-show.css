@@ -13,13 +13,10 @@
 }
 
 .profile-picture-round-thumb {
-    width: 80px;
+    width: 100px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 275px;
-    border-style: solid;
-    border-color: white;
-    border-width: 2px;
+    margin-top: 325px;
     z-index: 3;
     border-radius: 50%;
 }
@@ -38,7 +35,6 @@
     position: absolute;
     top: 10%;
     left: 85%;
-    background-color: white;
     border: none;
     border-radius: 50%;
 }

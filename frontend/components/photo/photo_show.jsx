@@ -22,7 +22,7 @@ class PhotoShow extends React.Component {
     let photo = this.props.photo ? this.props.photo : defaultPhoto;
     let owner = this.props.photo.owner ? this.props.photo.owner : defaultPhoto.owner;
     if (Object.values(this.props.photo).length === 0) return "";
-    if (owner.id === this.props.currentUser.id ) {
+    if (owner.id === this.props.currentUser.id) {
       return (
         <div>
           <div className="index-top-div"></div>
