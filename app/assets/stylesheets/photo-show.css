@@ -14,9 +14,16 @@
 
 .photo-show-left {
   width: 65%;
-  margin-top: 3%;
+  margin-top: 2%;
   margin-right: .5%;
   background: white;
+  padding: 2%;
+  line-height: 2em;
+}
+
+.photo-show-left-icons {
+  display: flex;
+  align-items: center;
 }
 
 .photo-show-right {
@@ -24,7 +31,6 @@
   margin-top: 3%;
   margin-left: .5%;
   background: white;
-  display: none;
 }
 
 .photo-show-image {
@@ -32,7 +38,39 @@
   height: 92%;
   width: 100%;
   object-fit: contain;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  align-self: center;
+}
+
+.trash-icon {
+  height: 24px;
+  margin-left: .5%;
+  padding-top: .75%;
+  padding-bottom: .75%;
+  padding-left: 1%;
+  padding-right: 1%;
+  z-index: 200;
+  box-sizing: content-box;
+}
+
+.trash-icon:hover {
+  cursor: pointer;
+  background: rgb(194, 194, 194);
+  border-radius: 50%;
+}
+
+.heart-icon-photo-show {
+  fill: transparent;
+  stroke: grey;
+  z-index: 0;
+  stroke-width: 2px;
+  width: 24px;
+  height: 24px;
+  padding: .5%;
+}
+
+.heart-icon-photo-show:hover {
+  cursor: pointer;
+  background: rgb(194, 194, 194);
+  border-radius: 50%;
 }
 

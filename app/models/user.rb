@@ -13,6 +13,9 @@ class User < ApplicationRecord
     validates :username, :session_token, presence: true, uniqueness: true
     validates :session_token, presence: true
     validates :password, length: { minimum: 6 }, allow_nil: true
+
+    before_create :set_default_profile_image
+
     attr_reader :password
 
     after_initialize :ensure_session_token
@@ -20,6 +23,14 @@ class User < ApplicationRecord
     has_many :likes, dependent: :destroy
 
     has_many :photos, dependent: :destroy
+
+    has_one_attached :profile_image
+
+    has_one_attached :cover_image
+
+    def set_default_profile_image
+        
+    end
 
     def self.find_by_credentials(username, password)
         user = self.find_by(username: username)

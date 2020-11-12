@@ -30,7 +30,7 @@ const App = () => (
       <ProtectedRoute exact path="/" component={SplashContainer} />
       <ProtectedRoute exact path="/photo/:photo_id" component={PhotoShowContainer} />
       <ProtectedRoute exact path="/photos/post" component={PostPhotoContainer} />
-      <ProtectedRoute exact path="/p" component={UserShowContainer} />  
+      <ProtectedRoute exact path="/p/:user_id" component={UserShowContainer} />  
     
   </div>
 );

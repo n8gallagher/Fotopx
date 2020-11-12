@@ -6,7 +6,7 @@
 }
 
 .index-top-div {
-  height: 60px;
+  height: 72px;
 }
 .flex-photos-index {
   display: flex;
@@ -40,7 +40,7 @@
   opacity: 0;
 }
 
-.photo-index-item-box:hover .photo-index-item-info {
+.photo-index-click-hov:hover .photo-index-item-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,7 +60,7 @@
 }
 
 
-.photo-index-item-box:hover #bot-grad {
+.photo-index-click-hov:hover #bot-grad {
   -webkit-transition: opacity .25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out;
   -ms-transition: opacity .25s ease-in-out;
@@ -68,14 +68,35 @@
   opacity: 1;
 }
 
+.photo-index-click-hov  {
+  z-index: 200;
+  height: 325px;
+  
+}
+
 
 .heart-icon {
   fill: transparent;
   stroke: grey;
+  z-index: 0;
   stroke-width: 2px;
   width: 24px;
   height: 24px;
 
+}
+
+.index-heart-box {
+  width: 40px;
+  height: 40px;
+  z-index: 300;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.index-heart-box:hover .heart-icon {
+  fill: #ffffffA8;
+  cursor: pointer;
 }
 
 .heart-icon:hover {

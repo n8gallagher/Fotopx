@@ -23,6 +23,11 @@ class Api::PhotosController < ApplicationController
         end
     end
 
+    def heart 
+        # @photo = Photo.find(params[:id]) ? 
+
+    end
+
     private
 
     def photo_params
