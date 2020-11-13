@@ -15,6 +15,7 @@ import SplashContainer from './splash/splash_container';
 import NavContainer from './nav/nav-container';
 import Home from './home/home';
 import UserShowContainer from './user/user_show_container';
+import UserEditContainer from './user/user_edit_container';
 import PostPhotoContainer from './photo/post_photo_container'
 import PhotosIndexContainer from './photo/photos_index_container';
 import PhotoShowContainer from './photo/photo_show_container';
@@ -30,7 +31,8 @@ const App = () => (
       <ProtectedRoute exact path="/" component={SplashContainer} />
       <ProtectedRoute exact path="/photo/:photo_id" component={PhotoShowContainer} />
       <ProtectedRoute exact path="/photos/post" component={PostPhotoContainer} />
-      <ProtectedRoute exact path="/p/:user_id" component={UserShowContainer} />  
+      <ProtectedRoute exact path="/p/:user_id" component={UserShowContainer} /> 
+      <ProtectedRoute exact path="/p/:user_id/edit" component={UserEditContainer} />
     
   </div>
 );
