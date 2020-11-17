@@ -45,7 +45,7 @@ class PostPhoto extends React.Component {
       contentType: false,
       processData: false
     }).then(
-      (res) => { debugger
+      (res) => {
         console.log(res.message)},
         this.showSpinner(),
         setTimeout( () => {
