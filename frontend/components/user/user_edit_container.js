@@ -5,7 +5,6 @@ import UserEdit from './user_edit';
 import { fetchUser } from '../../actions/user_actions'
 
 const mSTP = (state, ownProps) => {
-    console.log(ownProps.match.params.user_id)
     return ({
 
         currentUser: state.entities.users[state.session.id],

@@ -45,13 +45,11 @@ class PostPhoto extends React.Component {
       contentType: false,
       processData: false
     }).then(
-      (res) => {
-        console.log(res.message)},
         this.showSpinner(),
         setTimeout( () => {
-          this.props.history.push('/photos')
+          this.props.history.push('/discover')
         }, 1000),
-      (res) => console.log(res.responseJSON)
+      
     );
   }
 

@@ -16,11 +16,9 @@ class UserShow extends React.Component {
 
     render() {
         let owner = this.props.owner;
-        console.log(owner)
         if (!owner) {
             return null
         } else {
-            debugger
             if(owner.id === this.props.currentUser.id) {
                 return (
 

@@ -7,11 +7,9 @@ class PhotosIndex extends React.Component {
   constructor (props) {
     super(props)
     this.state = {photos: []};
-    // this.handlePhotoClick = this.handlePhotoClick.bind(photo);
   }
 
   componentDidMount () {
-    console.log(this.props);
     this.props.fetchPhotos();
   }
 
@@ -41,7 +39,7 @@ class PhotosIndex extends React.Component {
                 <div className="photo-index-item-box relative-box" key={photo.id}>
                   <div className="bottom-gradient-show" id="bot-grad"></div>             
                   <div className="photo-index-item-info">
-                    <h4>title: {photo.title}</h4>
+                    <h4>{photo.title}</h4>
                     <div className="index-heart-box">
                       <svg className="heart-icon" version="1.1" viewBox="-6.9 -13.1 40 40" x="0px" y="0px" id="icon-heart">
                           <path class="shape" d="M20.7-7.2c-5.8,0-7.6,4.3-7.6,4.3l0,0c0,0-1.8-4.3-7.6-4.3s-8.4,3.7-8.4,8.1c0,2.2,1.8,5.2,3.6,7.3

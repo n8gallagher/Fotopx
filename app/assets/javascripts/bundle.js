@@ -208,7 +208,6 @@ var signup = function signup(user) {
     return _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__["signup"](user).then(function (user) {
       return dispatch(receiveCurrentUser(user));
     }, function (err) {
-      console.log(err);
       return dispatch(receiveErrors(err.responseJSON));
     });
   };
@@ -743,15 +742,13 @@ var PhotosIndex = /*#__PURE__*/function (_React$Component) {
     _this = _super.call(this, props);
     _this.state = {
       photos: []
-    }; // this.handlePhotoClick = this.handlePhotoClick.bind(photo);
-
+    };
     return _this;
   }
 
   _createClass(PhotosIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      console.log(this.props);
       this.props.fetchPhotos();
     }
   }, {
@@ -790,7 +787,7 @@ var PhotosIndex = /*#__PURE__*/function (_React$Component) {
           id: "bot-grad"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "photo-index-item-info"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "title: ", photo.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, photo.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "index-heart-box"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
           className: "heart-icon",
@@ -959,13 +956,9 @@ var PostPhoto = /*#__PURE__*/function (_React$Component) {
         data: formData,
         contentType: false,
         processData: false
-      }).then(function (res) {
-        console.log(res.message);
-      }, this.showSpinner(), setTimeout(function () {
-        _this3.props.history.push('/photos');
-      }, 1000), function (res) {
-        return console.log(res.responseJSON);
-      });
+      }).then(this.showSpinner(), setTimeout(function () {
+        _this3.props.history.push('/discover');
+      }, 1000));
     }
   }, {
     key: "render",
@@ -1470,8 +1463,6 @@ var UserEdit = /*#__PURE__*/function (_React$Component) {
       if (!owner) {
         return null;
       } else {
-        debugger;
-
         if (owner.id === this.props.currentUser.id) {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
             action: ""
@@ -1522,7 +1513,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mSTP = function mSTP(state, ownProps) {
-  console.log(ownProps.match.params.user_id);
   return {
     currentUser: state.entities.users[state.session.id],
     owner: state.entities.users[ownProps.match.params.user_id]
@@ -1598,13 +1588,10 @@ var UserShow = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var owner = this.props.owner;
-      console.log(owner);
 
       if (!owner) {
         return null;
       } else {
-        debugger;
-
         if (owner.id === this.props.currentUser.id) {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             className: "user-show-box"
@@ -1678,7 +1665,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mSTP = function mSTP(state, ownProps) {
-  console.log(ownProps.match.params.user_id);
   return {
     currentUser: state.entities.users[state.session.id],
     owner: state.entities.users[ownProps.match.params.user_id]

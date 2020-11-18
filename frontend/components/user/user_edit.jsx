@@ -18,7 +18,6 @@ class UserEdit extends React.Component {
         if (!owner) {
             return null
         } else {
-            debugger
             if(owner.id === this.props.currentUser.id) {
                 return (
                     <div>
