@@ -21,13 +21,33 @@ class PhotosIndex extends React.Component {
 
   }
 
+  
+
 
   render () {
     let photos = this.props.photos ? this.props.photos : [];
+    const shuffle = (array) => {
+      var currentIndex = array.length, temporaryValue, randomIndex;
+    
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
+    
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+    
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+    
+      return array;
+    }
     return (
       <div className="photos-index-container">
         <div className="index-top-div"></div>
-        <div className="flex-photos-index">{photos.map(
+        <div className="flex-photos-index">{shuffle(photos.map(
           (photo) => {
             
             return (
@@ -52,7 +72,7 @@ class PhotosIndex extends React.Component {
                 </Link>
             )
           }
-        ).reverse()}</div>
+        ))}</div>
       </div>
     )
   }

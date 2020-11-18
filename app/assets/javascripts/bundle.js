@@ -763,13 +763,32 @@ var PhotosIndex = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var photos = this.props.photos ? this.props.photos : [];
+
+      var shuffle = function shuffle(array) {
+        var currentIndex = array.length,
+            temporaryValue,
+            randomIndex; // While there remain elements to shuffle...
+
+        while (0 !== currentIndex) {
+          // Pick a remaining element...
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1; // And swap it with the current element.
+
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+      };
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "photos-index-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "index-top-div"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "flex-photos-index"
-      }, photos.map(function (photo) {
+      }, shuffle(photos.map(function (photo) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
           className: "photo-index-click-hov",
           to: {
@@ -804,7 +823,7 @@ var PhotosIndex = /*#__PURE__*/function (_React$Component) {
           src: photo.photoUrl,
           alt: ""
         })));
-      }).reverse()));
+      }))));
     }
   }]);
 
